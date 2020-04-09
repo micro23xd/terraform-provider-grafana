@@ -4,7 +4,7 @@ import (
 	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/hashicorp/terraform/terraform"
 
-	gapi "github.com/nytm/go-grafana-api"
+	gapi "github.com/micro23xd/go-grafana-api"
 )
 
 func Provider() terraform.ResourceProvider {
@@ -31,6 +31,7 @@ func Provider() terraform.ResourceProvider {
 			"grafana_data_source":        ResourceDataSource(),
 			"grafana_folder":             ResourceFolder(),
 			"grafana_organization":       ResourceOrganization(),
+			"grafana_team":               ResourceTeam(),
 		},
 
 		ConfigureFunc: providerConfigure,
